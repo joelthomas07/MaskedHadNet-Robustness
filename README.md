@@ -46,7 +46,8 @@ A phase-space analysis of the model across varying Tensor Ranks (2 to 40) and Mi
 
 5. **Cross-Channel Inference (Slice Failure):** 
    During simulated sensor failure (entire slice/channel loss), standard methods fail to recover the missing dimension, resulting in severe color tinting and low PSNR. By optimizing the generalized Hadamard product exclusively over observed slices, MaskHadNet successfully learns cross-channel mathematical correlations, allowing it to accurately reconstruct entirely missing color channels from the remaining data.
- 
+
+ Below is an overview of the comparison between HadNet and MaskedHadnet: 
 | Mask Type | Corruption Scenario | HadNet (Standard) | MaskedHadNet (Extension) | Improvement (dB) |
 | :--- | :--- | :--- | :--- | :--- |
 | 1. Random Mask | Pixel-level Dropout | ~15.02 dB | ~21.30 dB | +6.28 dB |
