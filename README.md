@@ -36,17 +36,6 @@ The benchmarks compare **MaskHadNet** against **TSVD** (Truncated SVD), **TBCD**
 
 ---
 
-## 📂 Repository Structure
-The results are categorically stored in the `outputs/` directory:
-```text
-├── maskhadnet.py        # Core implementation and experiment script
-├── README.md            # Project documentation
-└── outputs/
-    ├── random_mask/      # Heatmaps for pixel-level dropout
-    ├── block_mask/       # Heatmaps for spatial occlusions
-    ├── slice_mask/       # Heatmaps for channel-wise failure
-    └── comparisons/      # PSNR vs. Missing Rate line graphs
-
 ## 📜 Acknowledgments
 
 This research implementation and robustness study is built upon the mathematical foundations established in:
@@ -63,3 +52,18 @@ This research implementation and robustness study is built upon the mathematical
 ---
 Special thanks to Prof. JK Sahoo under whom I did this project. He and his co-authors did innovative work on the generalized Hadamard product and its application to neural architectures, which I was able to extend on to
 an analysis when missing data is introduced into the idea.
+
+
+---
+
+## 📂 Repository Structure
+The results are categorically stored in the `outputs/` directory:
+```text
+├── maskhadnet.py        # Core implementation and experiment script
+├── README.md            # Project documentation
+└── outputs/
+    ├── random_mask/      # Heatmaps for pixel-level dropout
+    ├── block_mask/       # Heatmaps for spatial occlusions
+    ├── slice_mask/       # Heatmaps for channel-wise failure
+    └── comparisons/      # PSNR vs. Missing Rate line graphs
+
