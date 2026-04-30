@@ -46,3 +46,20 @@ The results are categorically stored in the `outputs/` directory:
     ├── block_mask/       # Heatmaps for spatial occlusions
     ├── slice_mask/       # Heatmaps for channel-wise failure
     └── comparisons/      # PSNR vs. Missing Rate line graphs
+
+## 📜 Acknowledgments
+
+This research implementation and robustness study is built upon the mathematical foundations established in:
+
+> **Panchal, S., Sahoo, J. K., & Behera, R.**
+> *"Tensor decomposition and neural architectures through generalized Hadamard products"*
+> Research conducted at **IISc Bangalore** and **BITS Pilani, K.K. Birla Goa Campus**.
+
+### My Contributions:
+*   **Masked Loss Extension**: Developed the `MaskHadNet` variant by integrating a binary-weighted Frobenius norm to enable true tensor completion.
+*   **Robustness Benchmarking**: Conducted a phase-analysis study across three specific failure modes: Random, Block, and Slice-wise corruption.
+*   **Analytical Comparison**: Evaluated neural methods against traditional analytical baselines (TSVD and TBCD) to prove the superior inductive bias of Hadamard-based neural layers.
+
+---
+Special thanks to Prof. JK Sahoo under whom I did this project. He and his co-authors did innovative work on the generalized Hadamard product and its application to neural architectures, which I was able to extend on to
+an analysis when missing data is introduced into the idea.
