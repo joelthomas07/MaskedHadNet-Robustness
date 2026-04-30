@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Commented out IPython magic to ensure Python compatibility.
+# File was ran in Google Colab in multiple cells. All heatmaps and the line graph comparison are neatly arranged in the outputs folder.
 """
 MaskHadNet: Robustness of HadNet/TSVD/TBCD to Missing Image Data
 Extension of: "Tensor decomposition and neural architectures through
