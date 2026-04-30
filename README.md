@@ -4,14 +4,14 @@ A robust implementation and extension of the **HadNet** architecture, specifical
 
 ---
 
-## 🚀 Project Overview
+## 1. Project Overview
 **MaskHadNet** is an unsupervised neural tensor decomposition model. It is an extension of the work by **Panchal, Sahoo, and Behera** in their paper, *"Tensor decomposition and neural architectures through generalized Hadamard products."*
 
 While the original HadNet is designed for tensor approximation, this project introduces a binary mask into the loss function to enable **robust tensor completion**. By ignoring missing or corrupted pixels during optimization, the model leverages its low-rank Hadamard bottleneck to infer the underlying signal rather than memorizing the corruption.
 
 ---
 
-## 🧠 Core Methodology
+## 2. Core Methodology
 The model approximates a 3D target tensor $X$ as the element-wise product of two factorized components:
 
 $$X \approx (W_1 \boxdot H_1) \odot (W_2 \boxdot H_2)$$
@@ -23,7 +23,7 @@ $$X \approx (W_1 \boxdot H_1) \odot (W_2 \boxdot H_2)$$
 
 ---
 
-## 📊 Experimental Results
+## 3. Experimental Results
 The benchmarks compare **MaskHadNet** against **TSVD** (Truncated SVD), **TBCD** (Tensor Block Coordinate Descent), and standard **HadNet**.
 
 ### Key Findings:
@@ -36,7 +36,7 @@ The benchmarks compare **MaskHadNet** against **TSVD** (Truncated SVD), **TBCD**
 
 ---
 
-## 📜 Acknowledgments
+## 4. Acknowledgments
 
 This research implementation and robustness study is built upon the mathematical foundations established in:
 
@@ -56,7 +56,7 @@ an analysis when missing data is introduced into the idea.
 
 ---
 
-## 📂 Repository Structure
+## 5. Repository Structure
 The results are categorically stored in the `outputs/` directory:
 ```text
 ├── maskhadnet.py        # Core implementation and experiment script
