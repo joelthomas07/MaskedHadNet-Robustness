@@ -10,13 +10,14 @@ While the original HadNet is optimized for low-rank tensor approximation, this p
 
 ## 2. Core Methodology
 
-The model approximates a target tensor $\mathcal{X}$ as the element-wise product of two factorized components using the **Generalized Hadamard Product ($\square$)**:
+The model approximates a target tensor $\mathcal{X}$ as the element-wise product of two factorized components using the Generalized Hadamard Product:
 
 $$\mathcal{X} \approx (\mathcal{W}_1 \square \mathcal{H}_1) \circ (\mathcal{W}_2 \square \mathcal{H}_2)$$
 
-*   **$\square$ (Generalized Hadamard Product):** Implemented via the Hadamard transformation operator $T$, which enables block-wise multiplication across tensor slices.
-*   **$\circ$ (Hadamard Product):** Standard element-wise multiplication.
+*   **Generalized Hadamard Product ($\square$):** Implemented via the Hadamard transformation operator $T$, which enables block-wise multiplication across tensor slices.
+*   **Hadamard Product ($\circ$):** Standard element-wise multiplication.
 *   **Masked Loss Function:** To facilitate completion, the Frobenius norm is calculated exclusively over observed indices $\Omega$:
+
 $$\mathcal{L} = \| \text{Mask} \odot (\mathcal{X}_{true} - \mathcal{X}_{pred}) \|_F$$
 
 ## 3. Experimental Results
@@ -51,7 +52,10 @@ This research implementation and robustness study is built upon the mathematical
 Special thanks to **Prof. J.K. Sahoo**, under whose guidance this project was conducted. The innovative work on generalized Hadamard products provided the essential foundation for this analysis of model robustness in missing data scenarios.
 
 ## 5. Repository Structure
+
 The results are stored categorically in the `outputs/` directory:
+
+```text
 ├── maskhadnet.py        # Core implementation and experiment script
 ├── README.md            # Project documentation
 └── outputs/
